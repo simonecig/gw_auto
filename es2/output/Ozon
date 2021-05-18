@@ -1,15 +1,15 @@
 &control
     calculation = 'scf'
     restart_mode = 'from_scratch'
-    prefix = 'BeO'
+    prefix = 'Ozon'
     tprnfor = .true.
     pseudo_dir = '/home/ciga/builds/pseudo_potentials'
 /
 
 &system
     ibrav = 0
-    nat = 2
-    ntyp = 2
+    nat = 3
+    ntyp = 3
     ecutwfc = 80
     nbnd = 10
 /
@@ -26,9 +26,11 @@ CELL_PARAMETERS
 0.00    0.00    20.00
 
 ATOMIC_SPECIES
-B	10.811	B.upf
-N	14.0067	N.upf
+O	15.9994	O.upf
+O	15.9994	O.upf
+O	15.9994	O.upf
 
 ATOMIC_POSITIONS (angstrom)
-B	0.0	0.0	0.0
-N	0.0	0.0	1.281
+O	0.0	0.0
+O	1.0869	0.0
+O	-1.0869	0.0

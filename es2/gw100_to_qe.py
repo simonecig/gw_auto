@@ -31,7 +31,7 @@ def creator(pos, name):
     config['system']['ntyp'] = ntyp
 
     # write file
-    f = open("out", 'w')
+    f = open("./output/"+name, 'w')
 
     f90nml.write(config, f)
 
