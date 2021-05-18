@@ -7,22 +7,22 @@ data = pd.read_csv("./data.txt", sep='\t', index_col=False)
 
 # plot data
 fig, ax = plt.subplots(2,2)
-ax[0][0].plot(data.treashold, data.tot_energy, 'p--', color='royalblue' )
-ax[0][1].plot(data.treashold, data.HOMO, 'p--', color='royalblue' )
-ax[1][0].plot(data.treashold, data.LUMO, 'p--', color='royalblue' )
-ax[1][1].plot(data.treashold, data.time_wall, 'p--', color='royalblue' ) 
+ax[0][0].plot(data.cutoff, data.tot_energy, 'p--', color='royalblue' )
+ax[0][1].plot(data.cutoff, data.HOMO, 'p--', color='royalblue' )
+ax[1][0].plot(data.cutoff, data.LUMO, 'p--', color='royalblue' )
+ax[1][1].plot(data.cutoff, data.time_wall, 'p--', color='royalblue' )
 
 # plot titles 
-ax[0][0].set_title('treashold vs en_tot')
-ax[0][1].set_title('treashold vs HOMO')
-ax[1][0].set_title('treashold vs LUMO')
-ax[1][1].set_title('treashold vs time (wall)')
+ax[0][0].set_title('cutoff vs en_tot')
+ax[0][1].set_title('cutoff vs HOMO')
+ax[1][0].set_title('cutoff vs LUMO')
+ax[1][1].set_title('cutoff vs time (wall)')
 
 # x labels
-ax[0][0].set_xlabel('treashold (Ry)')
-ax[0][1].set_xlabel('treashold (Ry)')
-ax[1][0].set_xlabel('treashold (Ry)')
-ax[1][1].set_xlabel('treashold (Ry)')
+ax[0][0].set_xlabel('cutoff (Ry)')
+ax[0][1].set_xlabel('cutoff (Ry)')
+ax[1][0].set_xlabel('cutoff (Ry)')
+ax[1][1].set_xlabel('cutoff (Ry)')
 
 # y labels
 ax[0][0].set_ylabel('total energy (Ry)')
