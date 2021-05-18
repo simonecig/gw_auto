@@ -1,15 +1,15 @@
 &control
     calculation = 'scf'
     restart_mode = 'from_scratch'
-    prefix = 'Ozon'
+    prefix = 'Aluminum trifluoride'
     tprnfor = .true.
     pseudo_dir = '/home/ciga/builds/pseudo_potentials'
 /
 
 &system
     ibrav = 0
-    nat = 3
-    ntyp = 1
+    nat = 4
+    ntyp = 2
     ecutwfc = 80
     nbnd = 10
 /
@@ -26,9 +26,11 @@ CELL_PARAMETERS
 0.00    0.00    20.00
 
 ATOMIC_SPECIES
-O	15.9994	O.upf
+Al	26.9815386	Al.upf
+F	18.9984032	F.upf
 
 ATOMIC_POSITIONS (angstrom)
-O	0.0	0.0	0.0
-O	1.0869	0.0	0.66
-O	-1.0869	0.0	0.66
+Al	0.0	0.0	0.0
+F	0.0	0.0	1.633
+F	0.0	1.4142	-0.8165
+F	0.0	-1.4142	-0.8165

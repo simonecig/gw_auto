@@ -1,7 +1,7 @@
 &control
     calculation = 'scf'
     restart_mode = 'from_scratch'
-    prefix = 'Ozon'
+    prefix = 'Carbon oxysulfide'
     tprnfor = .true.
     pseudo_dir = '/home/ciga/builds/pseudo_potentials'
 /
@@ -9,7 +9,7 @@
 &system
     ibrav = 0
     nat = 3
-    ntyp = 1
+    ntyp = 3
     ecutwfc = 80
     nbnd = 10
 /
@@ -27,8 +27,10 @@ CELL_PARAMETERS
 
 ATOMIC_SPECIES
 O	15.9994	O.upf
+C	12.0107	C.upf
+S	32.065	S.upf
 
 ATOMIC_POSITIONS (angstrom)
-O	0.0	0.0	0.0
-O	1.0869	0.0	0.66
-O	-1.0869	0.0	0.66
+O	0.0	0.0	1.1578
+C	0.0	0.0	0.0
+S	0.0	0.0	-1.5601

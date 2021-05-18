@@ -1,14 +1,14 @@
 &control
     calculation = 'scf'
     restart_mode = 'from_scratch'
-    prefix = 'Ozon'
+    prefix = 'Sodium hexamer'
     tprnfor = .true.
     pseudo_dir = '/home/ciga/builds/pseudo_potentials'
 /
 
 &system
     ibrav = 0
-    nat = 3
+    nat = 6
     ntyp = 1
     ecutwfc = 80
     nbnd = 10
@@ -26,9 +26,12 @@ CELL_PARAMETERS
 0.00    0.00    20.00
 
 ATOMIC_SPECIES
-O	15.9994	O.upf
+Na	22.98976928	Na.upf
 
 ATOMIC_POSITIONS (angstrom)
-O	0.0	0.0	0.0
-O	1.0869	0.0	0.66
-O	-1.0869	0.0	0.66
+Na	-2.4732949	-1.7969539	-0.2367313
+Na	-2.4732949	1.7969539	-0.2367313
+Na	0.9447146	-2.9075325	-0.2367313
+Na	0.9447146	2.9075325	-0.2367313
+Na	3.0571606	0.0	-0.2367313
+Na	0.0	0.0	1.1836565

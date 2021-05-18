@@ -1,7 +1,7 @@
 &control
     calculation = 'scf'
     restart_mode = 'from_scratch'
-    prefix = 'Ozon'
+    prefix = 'Water'
     tprnfor = .true.
     pseudo_dir = '/home/ciga/builds/pseudo_potentials'
 /
@@ -9,7 +9,7 @@
 &system
     ibrav = 0
     nat = 3
-    ntyp = 1
+    ntyp = 2
     ecutwfc = 80
     nbnd = 10
 /
@@ -27,8 +27,9 @@ CELL_PARAMETERS
 
 ATOMIC_SPECIES
 O	15.9994	O.upf
+H	1.00794	H.upf
 
 ATOMIC_POSITIONS (angstrom)
 O	0.0	0.0	0.0
-O	1.0869	0.0	0.66
-O	-1.0869	0.0	0.66
+H	0.7571	0.0	0.5861
+H	-0.7571	0.0	0.5861

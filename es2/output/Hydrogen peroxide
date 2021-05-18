@@ -1,15 +1,15 @@
 &control
     calculation = 'scf'
     restart_mode = 'from_scratch'
-    prefix = 'Ozon'
+    prefix = 'Hydrogen peroxide'
     tprnfor = .true.
     pseudo_dir = '/home/ciga/builds/pseudo_potentials'
 /
 
 &system
     ibrav = 0
-    nat = 3
-    ntyp = 1
+    nat = 4
+    ntyp = 2
     ecutwfc = 80
     nbnd = 10
 /
@@ -27,8 +27,10 @@ CELL_PARAMETERS
 
 ATOMIC_SPECIES
 O	15.9994	O.upf
+H	1.00794	H.upf
 
 ATOMIC_POSITIONS (angstrom)
-O	0.0	0.0	0.0
-O	1.0869	0.0	0.66
-O	-1.0869	0.0	0.66
+O	0.0	0.7375	-0.0528
+O	0.0	-0.7375	-0.0528
+H	0.819	0.817	0.422
+H	-0.819	-0.817	0.422

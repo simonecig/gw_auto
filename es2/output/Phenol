@@ -1,0 +1,46 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Phenol'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 13
+    ntyp = 3
+    ecutwfc = 80
+    nbnd = 10
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+C	12.0107	C.upf
+H	1.00794	H.upf
+O	15.9994	O.upf
+
+ATOMIC_POSITIONS (angstrom)
+C	-1.046085	-0.892147	-0.0
+C	0.257414	-1.400049	0.0
+C	1.331097	-0.503372	-0.0
+C	1.091601	0.874901	-0.0
+C	-0.121202	1.347367	0.0
+C	-1.23013	0.494536	0.0
+H	-1.874522	-1.578781	0.001032
+H	0.431625	-2.467932	0.001287
+H	2.336451	-0.886828	0.000832
+H	1.937051	1.553332	-0.000803
+O	-0.312498	2.697885	-0.001272
+H	-2.244385	0.877082	-0.000405
+H	-1.25113	2.879281	-0.002039
