@@ -16,7 +16,7 @@ def creator(pos, name):
     cell = pd.read_csv("./samples/parameters.txt", index_col=False, header=None)
 
     # set atomic species
-    names = pos['name'] # get unique names
+    names = pd.unique(pos['name']) # get unique names
     species = pd.DataFrame(columns=['name', 'mass', 'file'])
     species['name'] = names
     for i in range(len(names)):
@@ -24,8 +24,8 @@ def creator(pos, name):
         species['file'][i] = names[i] + ".upf"
 
     # edit config
-    nat = len(names)
-    ntyp = len(pos['name'])
+    ntyp = len(names)
+    nat = len(pos['name'])
     config['control']['prefix'] = name
     config['system']['nat'] = nat
     config['system']['ntyp'] = ntyp
@@ -66,3 +66,19 @@ atomic_masses = {'H': 1.00794, 'He': 4.002602, 'Li': 6.941, 'Be': 9.012182, 'B':
                   'No': 259.1009, 'Lr': 262, 'Rf': 267, 'Db': 268, 'Sg': 271, 'Bh': 270, 'Hs': 269, 'Mt': 278,
                   'Ds': 281, 'Rg': 281, 'Cn': 285, 'Nh': 284, 'Fl': 289, 'Mc': 289, 'Lv': 292, 'Ts': 294, 'Og': 294,
                   '': 0}
+
+
+# read GW100 db structure file and returns
+# positions and compund name
+def fetch(fname):
+
+    # read requested file
+    pos = pd.read_csv(fname, sep='\s+', skipinitialspace=True, skiprows=2,
+                      index_col=False, header=None,
+                      names=['name', 'x', 'y', 'z'])
+
+    # read only the row containing compound name
+    name = pd.read_csv(fname, sep=';', skipinitialspace=True, skiprows=1,
+                       index_col=False, header=None,
+                       names=['name', 'description', 'type'], nrows=1)
+    return pos, str(name['name'][0])
