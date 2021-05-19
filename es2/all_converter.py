@@ -5,7 +5,7 @@ import sys
 import gw100_to_qe as qe
 
 # Convert all GW100 files in a folder
-# in input files that can be used for qe.
+# into input files that can be used for qe.
 # The final data is saved in the "./output"
 # folder.
 # Requires folder name as argument

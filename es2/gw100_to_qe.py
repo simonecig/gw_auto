@@ -81,4 +81,5 @@ def fetch(fname):
     name = pd.read_csv(fname, sep=';', skipinitialspace=True, skiprows=1,
                        index_col=False, header=None,
                        names=['name', 'description', 'type'], nrows=1)
+
     return pos, str(name['name'][0])
