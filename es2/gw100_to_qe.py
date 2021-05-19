@@ -3,6 +3,7 @@
 import pandas as pd
 import numpy as np
 import f90nml
+import json_parser as js
 
 # generate pw.x input file
 # note: 'pos' must be a pandas dataframe with
@@ -23,12 +24,17 @@ def creator(pos, name):
         species['mass'][i] = atomic_masses[names[i]]
         species['file'][i] = names[i] + ".upf"
 
+    # get max cutoff value
+    cutoffs = js.cutoffs(names)
+    cutoff = np.amax(cutoffs)
+
     # edit config
     ntyp = len(names)
     nat = len(pos['name'])
     config['control']['prefix'] = name
     config['system']['nat'] = nat
     config['system']['ntyp'] = ntyp
+    config['system']['ecutwfc'] = cutoff
 
     # write file
     f = open("./output/"+name, 'w')

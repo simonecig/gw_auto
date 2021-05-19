@@ -3,6 +3,7 @@ import os
 import numpy as np
 import sys
 import gw100_to_qe as qe
+import json_parser as js
 
 # Convert all GW100 files in a folder
 # into input files that can be used for qe.

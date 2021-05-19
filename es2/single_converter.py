@@ -15,6 +15,7 @@ def main(argv):
     fname = argv[0]
 
     pos, name = qe.fetch(fname)
+
     # generate q-e input file
     qe.creator(pos, name)
 
