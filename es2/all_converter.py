@@ -10,10 +10,11 @@ import json_parser as js
 # The final data is saved in the "./output"
 # folder.
 # Requires folder name as argument
-def main(argv):
+def convert(argv):
 
     # get path
     flist = scanner(argv[0])
+
 
     # loop over files
     for fname in flist:
@@ -22,7 +23,10 @@ def main(argv):
         pos, name = qe.fetch(fname)
 
         # generate q-e input file
-        qe.creator(pos, name)
+        if len(argv > 1):
+            qe.creator_wCutoff(pos, name, int(argv[1]))
+        else:
+            qe.creator(pos, name)
 
     print(len(flist), " file generated!")
 
@@ -39,4 +43,4 @@ def scanner(path):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    convert(sys.argv[1:])

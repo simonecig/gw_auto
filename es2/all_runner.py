@@ -2,7 +2,7 @@
 import os
 import sys
 
-def main(argv):
+def run(argv):
     path = argv[0]
     flist = scanner(path)
     for name in flist:
@@ -19,4 +19,4 @@ def scanner(path):
     return flist
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    run(sys.argv[1:])

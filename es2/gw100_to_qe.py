@@ -5,10 +5,19 @@ import numpy as np
 import f90nml
 import json_parser as js
 
+def creator(pos, name):
+
+    # get max cutoff value
+    cutoffs = js.cutoffs(names)
+    cutoff = np.amax(cutoffs)
+
+    creator_wCutoff(pos, name, cutoff)
+
+
 # generate pw.x input file
 # note: 'pos' must be a pandas dataframe with
 #        the atomic names ['name'] as first columns
-def creator(pos, name):
+def creator_wCutoff(pos, name, cutoff):
 
     # read general configuration from sample
     config = f90nml.read("./samples/general.nml")
@@ -23,10 +32,6 @@ def creator(pos, name):
     for i in range(len(names)):
         species['mass'][i] = atomic_masses[names[i]]
         species['file'][i] = names[i] + ".upf"
-
-    # get max cutoff value
-    cutoffs = js.cutoffs(names)
-    cutoff = np.amax(cutoffs)
 
     # edit config
     ntyp = len(names)
