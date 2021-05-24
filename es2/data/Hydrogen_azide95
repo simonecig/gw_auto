@@ -1,0 +1,35 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Hydrogen_azide'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 4
+    ntyp = 2
+    ecutwfc = 95
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+H	1.00794	H.upf
+N	14.0067	N.upf
+
+ATOMIC_POSITIONS (angstrom)
+H	-0.9585	0.0	-0.3338
+N	0.0	0.0	0.0
+N	0.0	0.0	1.245
+N	0.1617	0.0	2.3674

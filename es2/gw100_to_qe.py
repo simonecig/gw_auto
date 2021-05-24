@@ -3,9 +3,17 @@
 import pandas as pd
 import numpy as np
 import f90nml
-import json_parser as js
 
 def creator(pos, name):
+    import json_parser as js
+    # read general configuration from sample
+    config = f90nml.read("./samples/general.nml")
+
+    # read cell parameters from sample
+    cell = pd.read_csv("./samples/parameters.txt", index_col=False, header=None)
+
+    # set atomic species
+    names = pd.unique(pos['name']) # get unique names
 
     # get max cutoff value
     cutoffs = js.cutoffs(names)
@@ -42,7 +50,7 @@ def creator_wCutoff(pos, name, cutoff):
     config['system']['ecutwfc'] = cutoff
 
     # write file
-    f = open("./output/"+name, 'w')
+    f = open("./output/"+name+str(cutoff), 'w')
 
     f90nml.write(config, f)
 
@@ -93,4 +101,5 @@ def fetch(fname):
                        index_col=False, header=None,
                        names=['name', 'description', 'type'], nrows=1)
 
-    return pos, str(name['name'][0])
+    n = str(name['name'][0])
+    return pos, n.replace(" ", "_")

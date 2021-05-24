@@ -1,0 +1,39 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Ethane'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 8
+    ntyp = 2
+    ecutwfc = 30
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+C	12.0107	C.upf
+H	1.00794	H.upf
+
+ATOMIC_POSITIONS (angstrom)
+C	0.0001	0.7657	0.0
+C	-0.0001	-0.7693	0.0
+H	-0.134892	1.160801	-1.011192
+H	-0.808178	1.160889	0.622373
+H	0.943359	1.16066	0.388723
+H	0.808348	-1.164489	-0.622151
+H	0.134598	-1.164401	1.011231
+H	-0.943239	-1.16426	-0.389014

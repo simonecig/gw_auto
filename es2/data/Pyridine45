@@ -1,0 +1,43 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Pyridine'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 11
+    ntyp = 3
+    ecutwfc = 45
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+N	14.0067	N.upf
+C	12.0107	C.upf
+H	1.00794	H.upf
+
+ATOMIC_POSITIONS (angstrom)
+N	0.0	0.0	0.0
+C	-0.476428	-1.252444	0.0
+C	-0.903103	0.989952	0.0
+C	-2.282876	0.784403	0.0
+C	-1.835282	-1.567988	0.0
+C	-2.760265	-0.525306	0.0
+H	-0.532213	2.008528	0.0
+H	0.26663	-2.041697	0.0
+H	-2.958369	1.628364	0.0
+H	-2.153556	-2.601071	0.0
+H	-3.818275	-0.726658	0.0

@@ -1,0 +1,36 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Carbon_tetrafluoride'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 5
+    ntyp = 2
+    ecutwfc = 50
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+C	12.0107	C.upf
+F	18.9984032	F.upf
+
+ATOMIC_POSITIONS (angstrom)
+C	0.0	0.0	0.0
+F	0.7638	-0.7638	0.7638
+F	-0.7638	0.7638	0.7638
+F	-0.7638	-0.7638	-0.7638
+F	0.7638	0.7638	-0.7638

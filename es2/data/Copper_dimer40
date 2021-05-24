@@ -1,0 +1,32 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Copper_dimer'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 2
+    ntyp = 1
+    ecutwfc = 40
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+Cu	63.546	Cu.upf
+
+ATOMIC_POSITIONS (angstrom)
+Cu	0.0	0.0	0.0
+Cu	0.0	0.0	2.2197

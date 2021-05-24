@@ -1,0 +1,37 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Formic_Acid'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 5
+    ntyp = 3
+    ecutwfc = 35
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+O	15.9994	O.upf
+H	1.00794	H.upf
+C	12.0107	C.upf
+
+ATOMIC_POSITIONS (angstrom)
+O	0.9858	0.0	2.0307
+H	-1.0241	0.0	1.7361
+C	0.0	0.0	1.343
+O	0.0	0.0	0.0
+H	0.9329	0.0	-0.2728

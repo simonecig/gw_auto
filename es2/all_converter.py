@@ -3,7 +3,7 @@ import os
 import numpy as np
 import sys
 import gw100_to_qe as qe
-import json_parser as js
+import extra
 
 # Convert all GW100 files in a folder
 # into input files that can be used for qe.
@@ -13,7 +13,7 @@ import json_parser as js
 def convert(argv):
 
     # get path
-    flist = scanner(argv[0])
+    flist = extra.scanner(argv[0])
 
 
     # loop over files
@@ -23,23 +23,10 @@ def convert(argv):
         pos, name = qe.fetch(fname)
 
         # generate q-e input file
-        if len(argv > 1):
-            qe.creator_wCutoff(pos, name, int(argv[1]))
-        else:
-            qe.creator(pos, name)
+        qe.creator(pos, name)
 
     print(len(flist), " file generated!")
 
-
-# get all files in path
-def scanner(path):
-    flist = []
-
-    for root, dirs, files in os.walk(path):
-        for file in files:
-            flist.append(os.path.join(root,file))
-
-    return flist
 
 
 if __name__ == "__main__":

@@ -1,0 +1,39 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Diborane6'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 8
+    ntyp = 2
+    ecutwfc = 70
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+B	10.811	B.upf
+H	1.00794	H.upf
+
+ATOMIC_POSITIONS (angstrom)
+B	0.0	0.0	0.887
+B	0.0	0.0	-0.887
+H	0.996	0.0	0.0
+H	-0.996	0.0	0.0
+H	0.0	1.0408	1.4639
+H	0.0	-1.0408	1.4639
+H	0.0	1.0408	-1.4639
+H	0.0	-1.0408	-1.4639

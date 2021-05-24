@@ -1,0 +1,43 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Benzene'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 12
+    ntyp = 2
+    ecutwfc = 65
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+C	12.0107	C.upf
+H	1.00794	H.upf
+
+ATOMIC_POSITIONS (angstrom)
+C	0.0	1.399	0.0
+C	1.2115	0.6995	0.0
+C	1.2115	-0.6995	0.0
+C	0.0	-1.399	0.0
+C	-1.2115	-0.6995	0.0
+C	-1.2115	0.6995	0.0
+H	0.0	2.5	0.0
+H	2.1651	1.25	0.0
+H	2.1651	-1.25	0.0
+H	0.0	-2.5	0.0
+H	-2.1651	-1.25	0.0
+H	-2.1651	1.25	0.0

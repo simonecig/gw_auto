@@ -1,0 +1,33 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Hydrogen_chloride'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 2
+    ntyp = 2
+    ecutwfc = 90
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+H	1.00794	H.upf
+Cl	35.453	Cl.upf
+
+ATOMIC_POSITIONS (angstrom)
+H	0.0	0.0	0.0
+Cl	0.0	0.0	1.2746

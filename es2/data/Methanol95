@@ -1,0 +1,38 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Methanol'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 6
+    ntyp = 3
+    ecutwfc = 95
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+C	12.0107	C.upf
+O	15.9994	O.upf
+H	1.00794	H.upf
+
+ATOMIC_POSITIONS (angstrom)
+C	-0.722791	-0.007039	0.0
+O	0.701687	0.011691	0.0
+H	-1.022488	-1.059189	0.0
+H	-1.162308	0.45518	-0.888335
+H	-1.148266	0.46827	0.888264
+H	0.990233	0.911667	0.0

@@ -1,0 +1,33 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Lithium_hydride'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 2
+    ntyp = 2
+    ecutwfc = 55
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+Li	6.941	Li.upf
+H	1.00794	H.upf
+
+ATOMIC_POSITIONS (angstrom)
+Li	0.0	0.0	0.0
+H	0.0	0.0	1.5949

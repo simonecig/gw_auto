@@ -1,22 +1,13 @@
 #!/usr/bin/env python3
 import os
 import sys
+import extra
 
 def run(argv):
     path = argv[0]
-    flist = scanner(path)
+    flist = extra.scanner(path)
     for name in flist:
-        os.system("mpirun -np 4 ~/builds/q-e/bin/pw.x < " + name)
-
-# get all files in path
-def scanner(path):
-    flist = []
-
-    for root, dirs, files in os.walk(path):
-        for file in files:
-            flist.append(os.path.join(root,file))
-
-    return flist
+        os.system("mpirun -np 4 pw.x < " + name + " > " + name + "_out" + " 2> " + name + "_err")
 
 if __name__ == "__main__":
     run(sys.argv[1:])

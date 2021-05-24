@@ -1,0 +1,36 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Germane'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 5
+    ntyp = 2
+    ecutwfc = 65
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+Ge	72.64	Ge.upf
+H	1.00794	H.upf
+
+ATOMIC_POSITIONS (angstrom)
+Ge	0.0	0.0	0.0
+H	0.8805	-0.8805	0.8805
+H	-0.8805	0.8805	0.8805
+H	-0.8805	-0.8805	-0.8805
+H	0.8805	0.8805	-0.8805

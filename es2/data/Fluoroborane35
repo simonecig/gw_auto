@@ -1,0 +1,33 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Fluoroborane'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 2
+    ntyp = 2
+    ecutwfc = 35
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+B	10.811	B.upf
+F	18.9984032	F.upf
+
+ATOMIC_POSITIONS (angstrom)
+B	0.0	0.0	0.0
+F	0.0	0.0	1.2626

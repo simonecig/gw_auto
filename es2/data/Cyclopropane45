@@ -1,0 +1,40 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Cyclopropane'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 9
+    ntyp = 2
+    ecutwfc = 45
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+C	12.0107	C.upf
+H	1.00794	H.upf
+
+ATOMIC_POSITIONS (angstrom)
+C	0.036473	0.859901	-0.182257
+C	-0.275674	-0.564282	-0.600227
+C	0.268426	-0.283892	0.786852
+H	-0.412409	-0.380348	1.623541
+H	1.285827	-0.580215	1.010404
+H	-0.796804	1.523474	0.013213
+H	0.896783	1.350428	-0.620593
+H	-1.331415	-0.803627	-0.632093
+H	0.315621	-1.079884	-1.346828

@@ -1,0 +1,38 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Vynil_chloride'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 6
+    ntyp = 3
+    ecutwfc = 65
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+C	12.0107	C.upf
+H	1.00794	H.upf
+Cl	35.453	Cl.upf
+
+ATOMIC_POSITIONS (angstrom)
+C	-0.554265	-0.445361	0.111076
+C	0.372254	0.438035	-0.23454
+H	-1.322093	-0.210763	0.83194
+H	-0.543697	-1.425246	-0.340536
+H	1.153254	0.24137	-0.951543
+Cl	0.44043	2.028766	0.431795

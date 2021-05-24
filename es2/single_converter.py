@@ -9,7 +9,7 @@ import gw100_to_qe as qe
 # a qe input file, which is saved
 # in the "./output" folder.
 # Requires file name as argument
-def main(argv):
+def convert(argv):
 
     # get file name
     fname = argv[0]
@@ -17,10 +17,11 @@ def main(argv):
     pos, name = qe.fetch(fname)
 
     # generate q-e input file
-    qe.creator(pos, name)
-
-    print("done!")
+    if len(argv) > 1:
+        qe.creator_wCutoff(pos, name, int(argv[1]))
+    else:
+        qe.creator(pos, name)
 
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    convert(sys.argv[1:])

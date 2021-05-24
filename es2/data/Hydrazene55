@@ -1,0 +1,37 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Hydrazene'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 6
+    ntyp = 2
+    ecutwfc = 55
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+N	14.0067	N.upf
+H	1.00794	H.upf
+
+ATOMIC_POSITIONS (angstrom)
+N	0.0	0.723	-0.1123
+N	0.0	-0.723	-0.1123
+H	-0.447	1.0031	0.7562
+H	0.447	-1.0031	0.7562
+H	0.9663	1.0031	0.0301
+H	-0.9663	-1.0031	0.0301

@@ -1,0 +1,46 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Cytosine'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 13
+    ntyp = 4
+    ecutwfc = 95
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+H	1.00794	H.upf
+C	12.0107	C.upf
+N	14.0067	N.upf
+O	15.9994	O.upf
+
+ATOMIC_POSITIONS (angstrom)
+H	-2.0638946	1.7581987	-0.0048606
+C	-1.1537688	1.1649096	0.0014411
+C	0.0751951	1.754264	0.0005025
+H	0.2153507	2.8348293	6.24e-05
+N	1.1910674	0.98926	-0.001178
+H	2.117815	1.4035814	-0.0026938
+C	1.1663885	-0.4437838	-9.52e-05
+O	2.2347026	-1.0410121	-0.0014923
+N	-0.0756682	-1.0234974	0.0071744
+C	-1.166747	-0.2723068	0.0031814
+N	-2.361515	-0.9269214	-0.0250037
+H	-2.3405765	-1.9329874	0.0897975
+H	-3.2271802	-0.4358623	0.1455697

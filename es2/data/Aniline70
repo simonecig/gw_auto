@@ -1,0 +1,46 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Aniline'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 14
+    ntyp = 3
+    ecutwfc = 70
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+C	12.0107	C.upf
+H	1.00794	H.upf
+N	14.0067	N.upf
+
+ATOMIC_POSITIONS (angstrom)
+C	-1.086143	-0.870526	0.0
+C	0.21084	-1.375886	0.0
+C	1.296883	-0.50536	0.0
+C	1.086142	0.870526	0.0
+C	-0.210841	1.375786	0.0
+C	-1.296983	0.505261	0.0
+H	-1.932704	-1.548451	0.0
+H	0.37498	-2.447943	0.0
+H	2.307474	-0.899002	0.0
+H	1.932383	1.54885	0.0
+H	-2.307832	0.898242	0.0
+N	-0.428501	2.790157	0.0
+H	0.323567	3.340664	0.346569
+H	-1.327164	3.07017	0.33398

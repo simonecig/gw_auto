@@ -1,0 +1,38 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Vynil_bromide'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 6
+    ntyp = 3
+    ecutwfc = 85
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+Br	79.904	Br.upf
+C	12.0107	C.upf
+H	1.00794	H.upf
+
+ATOMIC_POSITIONS (angstrom)
+Br	6.00448	4.49966	6.13302
+C	4.4208	4.5	3.7893
+C	4.4208	4.5	5.1149
+H	3.47747	4.50152	3.25856
+H	3.5259	4.5	5.71647
+H	5.32919	4.5	3.2083

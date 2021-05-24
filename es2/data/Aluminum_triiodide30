@@ -1,0 +1,35 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Aluminum_triiodide'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 4
+    ntyp = 2
+    ecutwfc = 30
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+Al	26.9815386	Al.upf
+I	126.90447	I.upf
+
+ATOMIC_POSITIONS (angstrom)
+Al	0.0	0.0	0.0
+I	0.0	0.0	2.461
+I	0.0	2.1313	-1.2305
+I	0.0	-2.1313	-1.2305

@@ -1,0 +1,38 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Vynil_iodide'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 6
+    ntyp = 3
+    ecutwfc = 90
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+C	12.0107	C.upf
+H	1.00794	H.upf
+I	126.90447	I.upf
+
+ATOMIC_POSITIONS (angstrom)
+C	0.0	0.0	0.0
+C	0.0	0.0	1.328
+H	-0.903971	0.0	-0.595154
+H	-0.899347	0.0	1.924168
+H	0.912883	0.0	-0.577101
+I	1.747544	0.0	2.461568
