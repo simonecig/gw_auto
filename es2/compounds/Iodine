@@ -1,0 +1,33 @@
+&control
+    calculation = 'scf'
+    restart_mode = 'from_scratch'
+    prefix = 'Iodine'
+    tprnfor = .true.
+    pseudo_dir = '/home/ciga/builds/pseudo_potentials'
+/
+
+&system
+    ibrav = 0
+    nat = 2
+    ntyp = 1
+    ecutwfc = 80
+    nbnd = 10
+/
+
+&electrons
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-12
+/
+
+CELL_PARAMETERS
+20.00   0.00    0.00
+0.00    20.00   0.00
+0.00    0.00    20.00
+
+ATOMIC_SPECIES
+I	126.90447	I.upf
+
+ATOMIC_POSITIONS (angstrom)
+I	0.0	0.0	0.0
+I	0.0	0.0	2.6663
