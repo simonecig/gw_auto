@@ -3,7 +3,7 @@ Python scripts to fetch data from the GW100 database and create a script for Q-E
 *NOTE:*All the following require pw.x to be in ``$PATH``
 
 # Single converter
-Generate ``pw.x`` input file using the specified GW100 db configuration
+Generate ``pw.x`` input file using the specified GW100 db configuration\n
 ``python single_converter.py ../../GW100/structures/xxx.upf``
 
 # All converter
