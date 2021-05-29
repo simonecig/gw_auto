@@ -15,3 +15,10 @@ The generated files are stored in ``./output/``
 Compute ``pw.x`` for each input file in the given path 
 ``python all_converter.py ./output/``
 Tip: run the program in a temporary directory 
+
+# Plot
+``python all_plotter.py option <arguments> ``
+Possible options:
+- ``prepare <path>`` retrieve tot_en, wall time and cpu time from all the ``pw.x`` outputs in the given path.
+- `` plot <names> ...`` plot given compounds (en tot vs cutoff). Run ``prepare`` first.
+- `` plot_all <path>``  plot all compounds found in path (broken). Run ``prepare`` first.

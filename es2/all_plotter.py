@@ -6,15 +6,16 @@ import sys
 import numpy as np
 import matplotlib.pyplot as plt
 
-# get output data from given path
-# find en tot, homo, lumo, cutoff
-# plot
-
+# Get all pw.x output data from given path
+# Find en tot, cutoff, cpu time 
+# Save pandas dataframe in plot_data.txt
 def prepare(argv):
 
     input_path = argv[0]
     flist = special_scan(input_path)
-    data = pd.DataFrame(columns=['name', 'cpu_time', 'wall_time', 'tot_en', 'cutoff'])
+    data = pd.DataFrame(columns=['name', 'cpu_time', 
+                                 'wall_time', 'tot_en', 
+                                 'cutoff'])
 
     for name in flist:
 
@@ -43,8 +44,8 @@ def prepare(argv):
     data.to_csv('plot_data.txt', sep='\t', index=False)
 
 
-# find and return en toto, homo, lumo, cutoff
-# from content
+# find and return en tot, cpu time, wall time, cutoff
+# from a single pw.x output file
 def output_parser(content):
 
     counter = 0 # discard first 2 word occurences
@@ -69,7 +70,7 @@ def output_parser(content):
             seconds = float(splitted_line[1][:-1])
             line = line[2:]
 
-        # if conly m are present in cpu time
+        # if only m are present in cpu time
         elif 'm' in line[0] and not 's' in line[0]:
             minutes = float(line[0][:-1])
             seconds = float(line[1][:-1])
@@ -131,6 +132,7 @@ def special_scan(path):
     return special_flist
 
 
+# plot all compounds found in names
 def plot(names):
 
     fig, ax = plt.subplots()
@@ -148,8 +150,12 @@ def plot(names):
 
 
     ax.legend(handles=labels)
+    ax.set_xlabel("Cutoff")
+    ax.set_ylabel("Energy (Ry)")
     plt.show()
 
+# plot all compound in path
+# (broken)
 def plot_all(path):
     path = path[0]
     f = open(path, 'r')
@@ -157,6 +163,7 @@ def plot_all(path):
     plot(names)
 
 
+# get cutoff from file name
 def get_cutoff(number_str):
 
     digits = [int(s) for s in number_str if s.isdigit()]
@@ -172,6 +179,7 @@ def get_cutoff(number_str):
     return cutoff
 
 
+# get compound name from path 
 def get_name(path):
     full_name = path.split('/')[-1]
     end_pos = 0
@@ -188,5 +196,7 @@ if __name__ == "__main__":
 
     elif sys.argv[1] == 'plot':
         plot(sys.argv[2:])
+
     elif sys.argv[1] == 'plot_all':
         plot_all(sys.argv[2:])
+
