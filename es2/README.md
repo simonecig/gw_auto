@@ -1,26 +1,29 @@
 Python scripts to fetch data from the GW100 database and create a script for Q-E.
 
-*NOTE:*All the following require pw.x to be in ``$PATH``
+**NOTE:** All the following require `pw.x` to be in ``$PATH``
 
-# Single converter
+# single_converter.py
 Generate ``pw.x`` input file using the specified GW100 db configuration
 
 ``python single_converter.py ../../GW100/structures/xxx.upf``
 
-# All converter
+# all_converter.py
 Generate ``pw.x`` input file *for each* GW100 db file in given path.
 
 ``python all_converter.py ../../GW100/structures/``
+
 The generated files are stored in ``./output/``
 
-# All runner
+# all_runner.py
 Compute ``pw.x`` for each input file in the given path 
 
 ``python all_converter.py ./output/``
-Tip: run the program in a temporary directory 
 
-# Plot
+Tip: run the program in a temporary directory, such as `tmp`
+
+# all_plotter.py
 ``python all_plotter.py option <arguments> ``
+
 Possible options:
 - ``prepare <path>`` retrieve tot_en, wall time and cpu time from all the ``pw.x`` outputs in the given path.
 - `` plot <names> ...`` plot given compounds (en tot vs cutoff). Run ``prepare`` first.
