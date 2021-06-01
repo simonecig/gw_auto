@@ -9,7 +9,7 @@
     ibrav=  0,
     nat=5,
     ntyp= 2,
-    ecutwfc =80,
+    ecutwfc =50,
     nbnd=10
  /
  &electrons
