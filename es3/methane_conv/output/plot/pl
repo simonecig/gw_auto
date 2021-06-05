@@ -1,0 +1,2 @@
+set xrange[-20:20]
+plot "8_re4" u 1:3 w l, "10_re4" u 1:3 w l, "16_re4" u 1:3 w l, "20_re4" u 1:3 w l, "8_im4" u 1:3 w l, "10_im4" u 1:3 w l , "16_im4" u 1:3 w l , "20_im4" u 1:3 w l

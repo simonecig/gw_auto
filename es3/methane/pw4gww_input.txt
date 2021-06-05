@@ -1,0 +1,30 @@
+&inputpw4gww    
+    prefix='Methane'
+    num_nbndv(1)=4
+    num_nbnds=10
+    l_truncated_coulomb=.true.
+    truncation_radius=7.5d0
+    n_self_lanczos=20
+    n_pola_lanczos=20
+    l_easy=.true.
+    s_first_state=4
+    s_last_state=5
+    s_first_spin=1
+    s_last_spin=1
+    n_gauss=100
+    omega_gauss=20.
+    l_easy_lanczos_g=.false.
+    l_whole_s=.false.
+    easy_grid_type=0
+    easy_grid_param(4)=4
+    easy_average_type=0
+    easy_psi_thrs=0.1
+    l_verbose=.true.
+    easy_restart_step=0
+    restart_gww=0
+    l_easy_dielectric_constant=.false.
+    l_easy_update_basis_w=.true.
+    easy_w_update_alpha=0.5d0
+    easy_w_update_lanczos=0.005d0
+    easy_w_thrs=1d-16
+/
