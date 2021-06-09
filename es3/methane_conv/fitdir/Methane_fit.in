@@ -1,0 +1,13 @@
+&inputgww
+ggwin%prefix='Methane'
+ggwin%nspin=1
+ggwin%max_i=10,
+ggwin%i_min=4
+ggwin%i_max=5
+ggwin%omega_fit=20
+ggwin%n_grid_fit=99
+ggwin%n_fit=50
+ggwin%n_multipoles=2
+ggwin%offset_fit=0
+/
+

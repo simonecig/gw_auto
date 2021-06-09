@@ -6,7 +6,7 @@ from tabulate import tabulate
 
 def main():
 
-    '''os.chdir('/Users/puma/CoPc/easy/equi_30_1_110_new')'''
+    '''os.chdir('/home/ciga/builds/qe-easy/bin/')'''
     
     nameeasy=input('Name of output easy file: \n')
     if(nameeasy==''):
@@ -402,7 +402,7 @@ def main():
 
                     fr.close()
                     fi.close()
-        os.system('/Users/puma/QE_CHECK/develop/bin/gww_fit.x < fit.in > fit.out')
+        os.system('/home/ciga/builds/qe-easy/bin/gww_fit.x < fit.in > fit.out')
         os.system('grep State: fit.out > results.out')
         f=open('results.out',mode='r')
         ivv=0
