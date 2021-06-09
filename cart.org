@@ -79,3 +79,8 @@ Raspberry Pi 4 model B 8Gb
 ** Lettore schede micro sd
 2.95, usb to micro sd
 https://www.kubii.it/schede-sd-storage/2057-lettore-di-schede-microsd-kubii-3272496009172.html?search_query=usb+to+microsd&results=175
+** Network switch
+- Netgear, 29 euro 
+https://www.amazon.it/Netgear-GS608-400PES-Switch-Gigabit-Integrati/dp/B00PGQCGF0/ref=sr_1_6?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=NETGEAR+8-Port&qid=1623229611&sr=8-6
+- Cavo ethernet x5
+https://www.amazon.it/Rankie-Ethernet-Connettori-Pacco-5-Colore/dp/B01J8KHY92/ref=sxin_9_ac_d_rm?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ac_md=3-3-Y2F2byBldGhlcm5ldCBjYXQgNg%3D%3D-ac_d_rm&cv_ct_cx=cavo%2Bethernet&dchild=1&keywords=cavo%2Bethernet&pd_rd_i=B01J8K0XK4&pd_rd_r=8d4ee653-304d-4b2d-894d-a5a538eae7e4&pd_rd_w=EHG7W&pd_rd_wg=irhHo&pf_rd_p=361b6031-7dcf-42b4-9e50-1f56cda89e83&pf_rd_r=B3NNBFV7NP3M4SMMF5T4&qid=1623229757&sr=1-4-fe323411-17bb-433b-b2f8-c44f2e1370d4&th=1
