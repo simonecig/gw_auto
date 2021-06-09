@@ -1,0 +1,81 @@
+#+TITLE: Kart
+
+* Raspberry Pi
+Raspberry Pi 4 model B 8Gb
+
+** Link per comprare
+- Kubii ~ (83.99€)
+  Tot 4 pezzi: 335,95€ (spedizione gratuita 3-5 giorni)
+  https://www.kubii.it/raspberry-pi-3-2-b/2955-raspberry-pi-4-modello-b-8gb-3272496301535.html?src=raspberrypi
+
+
+** Specifiche
+- Broadcom BCM2711, Quad core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5GHz
+- 2GB, 4GB or 8GB LPDDR4-3200 SDRAM (depending on model)
+- 2.4 GHz and 5.0 GHz IEEE 802.11ac wireless, Bluetooth 5.0, BLE
+- Gigabit Ethernet
+- 2 USB 3.0 ports; 2 USB 2.0 ports.
+- Raspberry Pi standard 40 pin GPIO header (fully backwards compatible with previous boards)
+- 2 × micro-HDMI ports (up to 4kp60 supported)
+- 2-lane MIPI DSI display port
+- 2-lane MIPI CSI camera port
+- 4-pole stereo audio and composite video port
+- H.265 (4kp60 decode), H264 (1080p60 decode, 1080p30 encode)
+- OpenGL ES 3.1, Vulkan 1.0
+- Micro-SD card slot for loading operating system and data storage
+- 5V DC via USB-C connector (minimum 3A*)
+- 5V DC via GPIO header (minimum 3A*)
+- Power over Ethernet (PoE) enabled (requires separate PoE HAT)
+- Operating temperature: 0 – 50 degrees C ambient
+*A good quality 2.5A power supply can be used if downstream USB peripherals consume less than 500mA in total.
+
+
+* Alimentatore
+
+** Link per comprare
+- Kubii
+  Alimentatore Ufficiale 15.3W USB-C
+  8.95€ x 4 = 35,81€
+  https://www.kubii.it/caricabatterie-alimentatori-raspberry/2678-alimentatore-ufficiale-usb-c-raspberry-pi-3272496300002.html#/171-colori-bianco
+
+
+** Specifiche
+5V/3A DC or 5.1V/3A DC minimum... A good quality 2.5A power supply can be used if downstream USB peripherals consume less than
+500mA in total.
+
+
+* Scheda SD
+** Link per comprare
+- Kubii 32Gb NOOBS
+  Scheda ufficiale micro-SD NOOBS 32GB
+  12.90€ x 4€ = 51.60€
+  https://www.kubii.it/i-prodotti-ufficiali-raspberry-pi/2923-scheda-ufficiale-micro-sd-noobs-32gb-classe-a1-panasonic-3272496301207.html
+- Kubii 32Gb economico
+  2 pezzi a 13.2€ --> 4 a 26.4€
+  https://www.kubii.it/schede-sd-storage/3344-carte-microsd-kingston-sdc1032gb-x-2-0740617298888.html?search_query=micro+sd&results=76
+- Kubii 128Gb
+  24.95€ x 4 = 99.8€
+  https://www.kubii.it/schede-sd-storage/2740-scheda-microsd-kingston-uhs-i-cl10-sdcs128gb-0740617274820.html?search_query=micro+sd&results=76
+- Kubii 64Gb
+  13.90€ x 4 = 55.6€
+  https://www.kubii.it/alimentazione-e-storage/2941-micro-sdhc-64gb-class10-verbatim-023942440840.html?search_query=micro+sd&results=76
+- Distrelec 32GB U3
+  10.62€ x 4 = 42.48€
+  https://www.distrelec.biz/en/extreme-microsd-memory-card-32-gb-sandisk-sdsqxaf-032g-gn6ma/p/30110938?q=micro+sd&pos=10&origPos=10&origPageSize=50&track=true
+- Distrelec 16GB
+  U3 10.35€ x 4 = 41.4€
+  https://www.distrelec.biz/en/microsd-card-superior-uhs-u3-16gb-90mb-80mb-silicon-power-sp016gbsthdu3v10sp/p/30019839?q=micro+sd&pos=6&origPos=6&origPageSize=50&track=true
+
+* Altro
+** Hub
+- Techson
+  18.39€, 4 slot
+  https://www.amazon.com/Techson-Acrylic-Raspberry-Stackable-Cluster/dp/B07TLSVTQP
+- Eau
+  21.99, 4 slots + fans  https://www.amazon.com/dp/B07XKXS9MD/ref=sspa_dk_detail_3?psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExOFRUWk1XUjMxRzA3JmVuY3J5cHRlZElkPUEwOTg1NDQwMVpJRTM0WEhJMjlOUSZlbmNyeXB0ZWRBZElkPUEwODQ0NjgwMUhWWkg3RkhRRkIyNiZ3aWRnZXROYW1lPXNwX2RldGFpbDImYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl
+- GeeekPi
+  19.99, 4 slots + fans
+  https://www.amazon.it/dp/B07Z4GRQGH?tag=duckduckgo-ffab-it-21&linkCode=osi&th=1&psc=1
+** Lettore schede micro sd
+2.95, usb to micro sd
+https://www.kubii.it/schede-sd-storage/2057-lettore-di-schede-microsd-kubii-3272496009172.html?search_query=usb+to+microsd&results=175
