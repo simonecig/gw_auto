@@ -1,0 +1,50 @@
+|                               |    Codice | Descrizione                                               | Prezzo unitario (ivato) (€) | Quantita | Prezzo totale (€) |
+| scheda micro sd               | 010680128 | Micro SDHC 32Gb. 633x Cl. 10 + adapter 933050             |                       13.63 |       4x |             54.52 |
+| scheda micro sd (alternativa) | 010680127 | Micro SDXC 64Gb. 300x Cl. 10 + adapter 932827             |                       18.74 |       4x |             74.96 |
+| netowrk switch                | 870070034 | I-SWHUB GB-500 Switching hub gigabit 5 porte              |                       23.98 |       1x |             23.98 |
+| cavo di rete                  | 170010856 | Cavo di Rete Patch Piatto Cat.6 UTP 5m ICOC U6EB-FL-050WH |                        3.50 |       4x |             14.00 |
+| alimentatore Raspberry Pi     | 061590006 | Alimentatore ECO MC 5VDC 3A 3.5" multicountry 73824       |                       15.07 |       4x |             60.28 |
+| Raspberry Pi                  |           |                                                           |                             |       4x |                   |
+| Rack case                     |           |                                                           |                             |       1x |                   |
+
+Totale attuale: 152.78€ (sd 32 Gb) o 173.22€ (sd 64 Gb)
+Totale stimato (con Raspberry Pi e Rack Case): ~510€
+
+* micro SD (4x)
+- 010680128 
+Acc. Fotocamera	
+Lexar	
+Micro SDHC 32Gb. 633x Cl. 10 + adapter 933050	
+13.63
+
+- OPPURE: 010680127
+Acc. Fotocamera 	
+Lexar	
+Micro SDXC 64Gb. 300x Cl. 10 + adapter 932827	
+18.74
+
+* switch (1x)
+870070034
+Switch	
+Intellinet	
+I-SWHUB GB-500 Switching hub gigabit 5 porte	
+23.98
+
+* cavo rete (4x)
+170010856		
+Cavo	
+Manhattan	
+Cavo di Rete Patch Piatto Cat.6 UTP 5m ICOC U6EB-FL-050WH
+3.50
+
+* alimentatore (4x)
+061590006		
+Accessori	
+Lindy	
+Alimentatore ECO MC 5VDC 3A 3.5" multicountry 73824	
+15.07	
+
+* Raspberry Pi (4x)
+
+
+* Rack case (1x)
